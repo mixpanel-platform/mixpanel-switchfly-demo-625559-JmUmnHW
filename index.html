@@ -115,7 +115,7 @@
                 from: fromDate,
                 to: toDate,
                 // set parameter that looks for the specific company name by which we will filter all events
-                "where": "(\"" + companyName + "\" in properties[\"$email\"])", 
+                "where": "(\"" + companyName + "\" in properties[\"Company\"])", 
               }
               MP.api.segment(eventName, params).done(function(results) {
                 $.extend(data, results.json);
